@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "WayBack Archived Time",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+
+    "tabs",
+
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "icons":{
+    "64":"logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web-beta.archive.org/*"],
+      
+      "js": ["myscript.js"]
+    }
+  ]
+}
